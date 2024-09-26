@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Portfolio Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Investment Portfolio Tracker</h1>
+
+    <!-- Total Portfolio Value -->
+    <div>
+      <h2>Total Portfolio Value: $<span id="totalValue">0</span></h2>
+    </div>
+
+    <!-- Add New Investment Form -->
+    <div class="form">
+      <h3>Add New Investment</h3>
+      <label for="assetName">Asset Name:</label>
+      <input type="text" id="assetName">
+      <label for="amountInvested">Amount Invested:</label>
+      <input type="number" id="amountInvested">
+      <label for="currentValue">Current Value:</label>
+      <input type="number" id="currentValue">
+      <button id="addInvestmentBtn">Add Investment</button>
+    </div>
+
+    <!-- Investment List -->
+    <div>
+      <h3>Investment List:</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Asset Name</th>
+            <th>Invested</th>
+            <th>Current</th>
+            <th>% Change</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="investmentList"></tbody>
+      </table>
+    </div>
+
+    <!-- Pie Chart -->
+    <h3>Portfolio Asset Distribution</h3>
+    <canvas id="portfolioChart" width="500" height="500"></canvas>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
